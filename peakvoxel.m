@@ -3,7 +3,7 @@ function[x] = peak_voxel( TIMF, func_atlas );
 
 % Extract data from one .mat file in each volnnnn subdirectory of the input subject directory.
 
-TIMF_total = zeros(91,109,91,1200);
+TIMF_total = zeros(91,109,91,1200); %TIMF-total = image(x-length, y-length, z-length, timeseries length)
 
   %func_atlas = load_nii('atlas_funct.nii.gz'); % input atlas AAL116
   %TIMF = load_nii('rfMRI_REST1_LR.nii.gz'); %input signal
@@ -12,7 +12,7 @@ TIMF_total = zeros(91,109,91,1200);
 
 %%finding peak voxel
 
-R = zeros(1,116);
+R = zeros(1,116); %116 = number of regions in the atlas that is used
 l= 0;
 for i = 1:116,
     S = [];
